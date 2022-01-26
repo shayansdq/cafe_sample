@@ -15,7 +15,7 @@ class Category(BaseModel):
     parent = models.ForeignKey('self', on_delete=models.CASCADE, related_name='sub_categories',
                                verbose_name='Parent Category',
                                null=True, blank=True)
-    ...
+    discount = models.PositiveIntegerField(verbose_name='Discount', default=0)
 
 
 class MenuItem(BaseModel):
